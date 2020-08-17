@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/Favicon.jpg">
+    <title>Music App</title>
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+     <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <nav class="navigation-bar">
+        <div class="logo">
+            <img src="images/logo.gif" alt="logo">
+        </div>
+        <div class="favs">
+            <p>Favourites</p>
+        </div>
+        
+         <div class="search-bar">
+               <div>
+                  <i class="fas fa-search search-ico"></i>
+               </div>
+               
+                <div>
+                    <input type="text" name="search" id="search" placeholder="Search">
+                </div>
+                
+                <div>
+                   <i class="fas fa-microphone mic-ico"></i>
+                </div>
+                
+         </div>
+         
+          <div class="notification-bell">
+                <i class="fas fa-bell" title="Notifications"></i>
+         </div>
+           
+         <div class="profile-picture">
+                <img src="images/+91%2070097%2041405%2020191002_081339.jpg" alt="profile-pic">
+         </div> 
+        
+    </nav>
+    
+    <main>
+      <header>
+         <div class="outer-carousel">
+            <div class="carousel">
+                <img src="crousel/carousel1.jpg">           <img src="crousel/carousel2.jpg">
+                <img src="crousel/carousel3.jpg">
+             </div>
+        </div>
+      </header>
+       
+       <section class="latest-release">
+          <h2>Latest Release</h2>
+           <div class="latest-outer">
+               <div class="latest1">
+                    <img src="latest%20hindi/baarish.jpeg" alt="img-baarish" width="50px"> 
+                   <p>Baarish<br>Aug 17,2017</p>
+               </div>
+               <div class="latest2">
+                    <img src="latest hindi/galiyaan.jpg" alt="img-galiyaan" width="50px"> 
+                    <p>Galiyaan <br>Sept 11,2018</p>
+               </div>
+               <div class="latest3">
+                    <img src="latest hindi/giveme%20some%20sunshine.jpg" alt="img-givemesunshine" width="50px"> 
+                    <p>Give Me Rays <br>Feb 19,2019</p>
+               </div>
+               <div class="latest4">
+                    <img src="latest hindi/tera%20ban%20jaunga.jpg" alt="img-terabanjau" width="50px"> 
+                    <p>Tera Ban Jau<br>Jan 10,2020</p>
+               </div>
+           </div>
+       </section>
+        
+        <section class="popular-artists">
+           <h2>Popular Artists</h2>
+            <div class="artist">
+               <div>
+                <img src="popuar-artist/220px-Shreya_Ghoshal_at_Filmfare_Awards_South.webp" >
+                </div>
+                <div>
+                <img src="popuar-artist/arjit.cms">
+                </div>
+                <div>
+                <img src="popuar-artist/neha.webp" width="210px" height="180px">
+                <img src="popuar-artist/sunidhi-chauhan-32019-22-06-2018-01-19-33.jpg" >
+                </div>
+                <div>
+                <img src="popuar-artist/Sonu_Nigam_Instagram_Image.jpg" >
+                </div>
+            </div>
+        </section>
+        
+        <section class="categories">
+           <div class="cat-pic">
+            <div>
+                <img src="images/party.jpg" width="230px" height="150px">
+                <p>Party</p>
+            </div>
+            <div>
+                <img src="images/electronic.jpg" width="230px" height="150px">
+                <p>Electronic</p>
+            </div>
+            <div>
+                <img src="images/road%20trip.jpg" width="230px" height="150px">
+                <p>Road Trip</p>
+            </div>
+           </div>
+        </section>
+    </main>
+    <aside>
+        <h1>QUEUE</h1>
+        <div id="drop">
+            <select name="Queue">
+                <option>Playlists</option>
+                <option id="red">Favourite Songs</option>
+            </select>
+        </div>
+        
+        <div class="song-list">
+           
+           <div class="list1">
+            <p>01</p>
+            <img src="latest hindi/tere%20sang%20yara.jpg" width="70px" onClick="document.getElementById('audio_play').play(); return false;">
+            <p>Tere Sang Yara</p>
+            <i class="far fa-heart"></i>
+            </div>
+            
+            <div class="list1">
+            <p>02</p>
+            <img src="latest%20hindi/kaun%20tujhe.jpg" width="70px">
+            <p>Kaun Tujhe</p>
+            <i class="far fa-heart"></i>
+            </div>
+            
+            
+            
+            <div class="list1">
+            <p>03</p>
+            <img src="queue-poster/8%20parche.jpg" width="70px">
+            <p>8 Parche</p>
+            <i class="far fa-heart"></i>
+            </div>
+            
+            <div class="list1">
+            <p>04</p>
+            <img src="queue-poster/channa%20ve.jpg" width="70px">
+            <p>Channa Ve</p>
+            <i class="far fa-heart"></i>
+            </div>
+            
+            <div class="list1">
+            <p>05</p>
+            <img src="queue-poster/janant.jpg" width="70px">
+            <p>Jannat</p>
+            <i class="far fa-heart"></i>
+            </div>
+            
+            <div class="list1">
+            <p>06</p>
+            <img src="queue-poster/Daru-Badnaam-Punjabi-2016-20191010170948-500x500.jpg" width="70px">
+            <p>Daru Badnam</p>
+            <i class="far fa-heart"></i>
+            </div>
+            
+            <div class="list1">
+            <p>06</p>
+            <img src="queue-poster/palazzo.jpg" width="70px">
+            <p>Palazzo</p>
+            <i class="far fa-heart"></i>
+            </div>
+        </div>
+    </aside>
+    
+    
+    <!-- footer -->
+    
+    <footer>
+        <div class="active-song-description">
+            <!-- song image -->
+            <div id="song-image">
+                <img src="queue-poster/janant.jpg">
+            </div>
+            <!-- song name and author -->
+            <div class="song-desc">
+                <div>
+                    Jannat
+                </div>
+                <div>
+                    B Praak
+                </div>
+                <!-- heart icon and ban icon -->
+            </div>
+            <div class="heart-and-ban-icon">
+                <span>
+                    <i class="far fa-heart"></i>
+                </span>
+                <span>
+                    <i class="fas fa-ban"></i>
+                </span>
+            </div>
+        </div>
+        
+        <!-- <div class="player">
+            <div class="controls">
+                <div><i class="fas fa-random"></i></div>
+                <div><i class="fas fa-step-backward"></i></div>
+                <div><i class="fas fa-pause-circle"></i></div>
+                <div><i class="fas fa-step-forward"></i></div>
+                <div><i class="fas fa-redo"></i></div>
+            </div> -->
+            
+            <div id="slider">
+                <audio id="audio_play" controls>
+                    <source src="songs/Jannat%20-%20B%20Praak.mp3" type="audio/mpeg" />
+                </audio>
+            
+               <!--  <div class="time">
+                    0:00
+                </div>
+                <div class="slidecontainer">
+                    <input type="range" min="0" max="100" value="0" class="slider" id="myRange">
+                </div>
+                
+                <div class="time">
+                    4:44
+                </div> -->
+            </div>
+        <!-- </div> -->
+        
+        <!-- <div class="extras">
+            <div>
+                <i class="fas fa-list-ul"></i>
+            </div>
+            <div>
+                <i class="fas fa-laptop"></i>
+            </div>
+            <div>
+                <i class="fas fa-volume-up"></i>
+            </div>
+            <div class="slidecontainer" style="width:30%;">
+                <input type="range" min="0" max="100" value="0" class="slider" id="myRange" style="margin-top:0px;">
+            </div>
+            <div>
+                <i class="fas fa-expand-alt"></i>
+            </div>
+        </div> -->
+    </footer>
+     
+</body>
+</html>

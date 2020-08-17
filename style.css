@@ -1,0 +1,560 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+}
+
+/* all the divs inside the navigation bar should be placed side by side*/
+/* .navigation-bar > div {
+    display: inline-block;
+} */
+
+/* top navigation bar */
+.navigation-bar {
+    height: auto;
+	width: auto;
+	/* background-image: linear-gradient(180deg, black, rgba(0, 0, 0, 0)); */
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	box-sizing: border-box;
+	padding-left: 5%;
+	padding-right: 5%;
+    margin-top: 1%;
+	/* transition: all ease-in-out 1s; */ /* when the navbar loads, every property transits for 1s  */
+}
+/* logo */
+.logo img {
+	height: 100px;
+	width: 140px;
+	border-radius: 100%;
+}
+
+/* animation for favoutites text */
+@keyframes flexible {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotateY(360deg);
+	}
+	75% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scaleX(1);
+	}
+}
+/* favourites text */
+.favs {
+    letter-spacing: 0.01rem;
+    font-size: 1.2rem;
+    color: white;
+	animation-name: flexible;
+	animation-timing-function: ease-in-out;
+	animation-duration: 2s;
+	perspective: 10000px;
+	transform-style: preserve-3d;
+	animation-iteration-count: 5;
+}
+
+/* serach-bar */
+.search-bar {
+	width: 20%;
+    position: relative;
+    margin-left: 20%;
+}
+
+/* changing the default style of the input bar */
+.search-bar input {
+	width: 100%;
+	font-size: 16px;
+	text-decoration: none;
+	border-radius: 18px;
+	border: none;
+	padding: 5px;
+	font-weight: 500;
+	text-indent: 10%;
+	transition: all ease-in-out 0.1s;
+}
+
+
+.search-ico {
+	color: rgba(0, 0, 0, 0.5);
+}
+/* mic icon for input */
+.mic-ico {
+	color: rgba(0, 0, 0, 0.5);
+}
+
+/* search icon */
+.search-bar>div:nth-child(1){
+    display: inline-block;
+    position: absolute;
+    top: 20%;
+    left: 2%;
+}
+
+/* mic icon */
+.search-bar>div:nth-child(3){
+    display: inline-block;
+    position: absolute;
+    top: 20%;
+    left: 95%;
+}
+/* when the user clicks on the search bar, there should be no blue outlining */
+input:focus {
+	outline: none;
+}
+
+/* notification bell */
+.notification-bell i{
+	width: -50px;
+	height: -150px;
+    font-size: 2rem;
+	animation-name: ringing_bell;
+	animation-duration: 0.5s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+    color: #ffeb3b;
+}
+
+/* animation for bell image */
+@keyframes ringing_bell {
+	0% {
+		transform: rotate(-5deg);
+	}
+	 50% {
+	    transform: rotate(0deg);
+	}
+	100% {
+	    transform: rotate(5deg);
+	} 
+}
+
+
+/* profile picture of the user */
+.profile-picture img {
+	width: 65px;
+	height: 65px;
+    margin-top: 6px;
+	border-radius: 100%;
+    margin-right: 50px;
+}
+
+
+@media screen and (max-width:800px){
+    .search-bar {
+	  width: 20%;
+      position: relative;
+      margin-left: 1%;
+    }
+    
+    .profile-picture img {
+	   margin-right: 0px;
+       }
+    .notification-bell i{
+	
+    margin-left: 0.5rem;
+	
+     }
+    .navigation-bar {
+    
+	padding-left: 1%;
+	
+    }
+    
+}
+
+/* navigation bar is completed here */
+/* /////////////////////////////////////////////// */
+
+/* main */
+
+main{
+    display: inline-block;
+    width: 70%;
+}
+.outer-carousel {
+    margin-top: 3%;
+    transition: all ease-in-out 1s;
+    margin-left: 35%;
+}
+/*carousel*/
+.carousel {
+    width: 45%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+} 
+/*general properties for images in the carousel*/
+.carousel img {
+    display: inline-block;
+    height: 12vw;
+    width: 19.5vw;
+    border-radius: 20px;
+     transition: all cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.2s alternate;
+    ;
+}
+/*
+first image in the carousel
+if you see it direction wise, then it is the third image in the carousel
+*/
+.carousel img:nth-child(1) {
+    position: relative;
+    left: 33vw;
+    z-index: 2;
+}
+/*image which is in the maddle of the carousel*/
+.carousel img:nth-child(2) {
+    z-index: 3;
+}
+/*
+third image in the carousel
+if you see it direction wise, then it is the first image in the carousel
+*/
+.carousel img:nth-child(3) {
+    position: relative;
+    right: 35vw;
+    z-index: 1;
+}
+
+/* animations for carousel */
+
+.carousel img:hover {
+    z-index: 4;
+    box-shadow: 0px 0px 12px 0.1px black;
+    height: 15vw;
+    width: 22vw;
+}
+ 
+/*  Latest Release */
+
+.latest-release h2{
+    display: block;
+    color: white;  
+    font-size: 1.3rem;
+    margin: 5% 0 0 11%;
+}
+.latest-outer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 60%;
+    margin-left: 15%;
+    margin-top: 2%;
+    
+}
+
+.latest1{
+    
+    height: 10%;
+    width: 20%;
+    margin-right: 30%;
+    
+}
+
+.latest2 {
+    
+    height: 10%;
+    width: 20%;
+    margin-right: 30%;
+    
+}
+
+.latest3 {
+    
+    height: 10%;
+    width: 20%;
+    margin-right: 30%;
+    
+   
+}
+
+.latest4{
+    
+   height: 10%;
+   width: 20%;
+   margin-right: 30%;
+    
+}
+
+.latest-outer div>p{
+    display: inline-block;
+    color: white;
+    font-family:serif;
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+    position: relative;
+    left: 80px;
+    bottom: 57px;
+    
+}
+
+@media screen and (max-width:900px){
+    .latest-outer div>p{
+    display: inline-block;
+    color: white;
+    font-family:serif;
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+    position: relative;
+    left: 0px;
+    bottom: 0px;
+    
+}
+}
+
+/* popular-artist */
+
+.popular-artists h2{
+    display: block;
+    color: white;  
+    font-size: 1.3rem;
+}
+
+.popular-artists{
+    margin-left: 12%;
+    
+}
+
+.artist{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3%;
+}
+.artist img{
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    margin: 5px;
+    
+}
+
+/* categories(party,road trip) */
+
+.cat-pic{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3%;
+    margin-left: 11%;
+    width: 100%;
+}
+.cat-pic img{
+     margin: 20px;
+   
+    
+}
+
+.cat-pic p{
+    color: white;
+    font-weight: 500;
+    font-family: serif;
+    font-size: 1.6rem;
+    text-align: center;
+    position: relative;
+    bottom: 130px;
+    letter-spacing: 0.01rem;
+    line-height: 0.1rem;
+
+    
+}
+/* aside */
+
+aside{
+    color: white;
+    display: inline-block;
+    width: 25%;
+    vertical-align: top;
+}
+
+/* dropdown */
+
+#drop{
+    margin-left: 80%;
+    margin-top: -40px;
+}
+
+
+
+
+/* list of songs */
+.list1{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: -4%;
+    margin-top: 8%;
+    position: relative;
+}
+.list1>p{
+    margin: 30px;
+}
+.list1 img{
+    box-shadow: 0 0 5px 2px blue;
+    position: relative;
+}
+.list1 i{
+    position: absolute;
+    left: 85%;
+    top: 35%;
+    
+}
+.list1 i:hover{
+    color:red;
+    
+}
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* Footer section starts here*/
+/* this is the container for the whole footer */
+footer {
+	position: fixed;
+	bottom: 1px;
+	width: 100%;
+	height: 60px;
+	background-color: white;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-content: center;
+	flex-wrap: nowrap;
+	padding: 0px 3%;
+	box-sizing: border-box;
+	z-index: 6;
+}
+/* footer is divided into 3 parts */
+/* 1. first part of the footer */
+.active-song-description {
+	/* border:1px solid white; */
+	height: 90%;
+	width: 25%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+/* the current song which is being played, this is the image container for that. */
+#song-image {
+	width: 50px;
+	height: 50px;
+	min-width: 50px;
+	min-height: 50px;
+}
+/* current song image */
+#song-image img {
+	width: 100%;
+	height: 100%;
+}
+/* heart and ban icon */
+.heart-and-ban-icon {
+	height: 100%;
+	padding-top: 4%;
+}
+/* song decscription */
+.song-desc {
+	margin-right: 1%;
+	margin-left: 1%;
+}
+/* song name */
+.song-desc div:nth-child(1) {
+	font-size: 14px;
+}
+/* song author */
+.song-desc div:nth-child(2) {
+	font-size: 12px;
+}
+
+/* 2. Second part of the footer*/
+.player {
+	width: 45%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: nowrap;
+}
+/* controls is the container for all the center controls of the player */
+.controls {
+	width: 40%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 20px;
+}
+/* this is the song-duration slider */
+#slider {
+	width: 100%;
+	font-size: 12px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: center;
+	margin-top: 5px;
+}
+/* ////////// */
+.time {
+	margin: 0px 10px;
+}
+
+/* adjusting the slider for better visuals */
+.slidecontainer {
+	width: 100%;
+}
+/* for audio and main center player */
+.slider {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 5px;
+	background: #d3d3d3;
+	outline: none;
+	opacity: 0.5;
+	-webkit-transition: 0.2s;
+	transition: opacity 0.2s;
+}
+/* hover effect for the slider */
+.slider:hover {
+	opacity: 1;
+}
+/* these are for adjusting the dimensions and default styling of the long-slider */
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 17px;
+	height: 17px;
+	border-radius: 50%;
+	background: #007bff;
+	cursor: pointer;
+}
+/* this is the circular thumb, which can be moved across the div */
+.slider::-moz-range-thumb {
+	width: 25px;
+	height: 25px;
+	background: #4caf50;
+	cursor: pointer;
+}
+
+/* third part of the footer */
+/* this contains the extra icons and slider for volume */
+/* this is also a container */
+.extras {
+	width: 20%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#audio_play{
+    width: 70%;
+}
